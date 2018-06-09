@@ -11,7 +11,6 @@
 		CF79EEF620B5E4320021577D /* httpInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79EEF520B5E4320021577D /* httpInfo.swift */; };
 		CF79EEF820BD9C900021577D /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF79EEF720BD9C900021577D /* GCDBlackBox.swift */; };
 		CF8DD1DB20B1DEA000DDF950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8DD1DA20B1DEA000DDF950 /* AppDelegate.swift */; };
-		CF8DD1DD20B1DEA000DDF950 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8DD1DC20B1DEA000DDF950 /* ViewController.swift */; };
 		CF8DD1E020B1DEA000DDF950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8DD1DE20B1DEA000DDF950 /* Main.storyboard */; };
 		CF8DD1E520B1DEA100DDF950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8DD1E320B1DEA100DDF950 /* LaunchScreen.storyboard */; };
 		CF8DD1F020B1DEA100DDF950 /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8DD1EF20B1DEA100DDF950 /* OnTheMapTests.swift */; };
@@ -23,6 +22,9 @@
 		CF8DD21B20B4C99800DDF950 /* dataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8DD21A20B4C99800DDF950 /* dataSource.swift */; };
 		CF9FB74C20C0562C003EF5F9 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB74B20C0562C003EF5F9 /* MapViewController.swift */; };
 		CF9FB75820C83000003EF5F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9FB75720C83000003EF5F9 /* Assets.xcassets */; };
+		CF9FB75C20CAD7B4003EF5F9 /* otherLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB75B20CAD7B4003EF5F9 /* otherLoginViewController.swift */; };
+		CF9FB75E20CB1C41003EF5F9 /* studentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB75D20CB1C41003EF5F9 /* studentTableViewCell.swift */; };
+		CF9FB76020CB1CC2003EF5F9 /* studentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB75F20CB1CC2003EF5F9 /* studentTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,6 @@
 		CF79EEF720BD9C900021577D /* GCDBlackBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 		CF8DD1D720B1DEA000DDF950 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8DD1DA20B1DEA000DDF950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF8DD1DC20B1DEA000DDF950 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CF8DD1DF20B1DEA000DDF950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF8DD1E420B1DEA100DDF950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF8DD1E620B1DEA100DDF950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,6 +66,9 @@
 		CF8DD21A20B4C99800DDF950 /* dataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataSource.swift; sourceTree = "<group>"; };
 		CF9FB74B20C0562C003EF5F9 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CF9FB75720C83000003EF5F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../Desktop/untitled folder/Assets.xcassets"; sourceTree = "<group>"; };
+		CF9FB75B20CAD7B4003EF5F9 /* otherLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = otherLoginViewController.swift; sourceTree = "<group>"; };
+		CF9FB75D20CB1C41003EF5F9 /* studentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentTableViewCell.swift; sourceTree = "<group>"; };
+		CF9FB75F20CB1CC2003EF5F9 /* studentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				CF8DD21420B4AC7D00DDF950 /* constant.swift */,
+				CF8DD21620B4B5B000DDF950 /* accountInfo.swift */,
 				CF79EEF520B5E4320021577D /* httpInfo.swift */,
 				CF79EEF320B5DC9D0021577D /* extensions.swift */,
-				CF8DD21620B4B5B000DDF950 /* accountInfo.swift */,
 				CF8DD21820B4C4F700DDF950 /* studentLocations.swift */,
 				CF8DD21A20B4C99800DDF950 /* dataSource.swift */,
 				CF79EEF720BD9C900021577D /* GCDBlackBox.swift */,
@@ -160,9 +164,11 @@
 		CF8DD21D20B4DD1000DDF950 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CF8DD1DC20B1DEA000DDF950 /* ViewController.swift */,
 				CF8DD21220B3926100DDF950 /* LogInViewController.swift */,
+				CF9FB75B20CAD7B4003EF5F9 /* otherLoginViewController.swift */,
 				CF9FB74B20C0562C003EF5F9 /* MapViewController.swift */,
+				CF9FB75D20CB1C41003EF5F9 /* studentTableViewCell.swift */,
+				CF9FB75F20CB1CC2003EF5F9 /* studentTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -318,12 +324,14 @@
 				CF9FB74C20C0562C003EF5F9 /* MapViewController.swift in Sources */,
 				CF8DD21920B4C4F700DDF950 /* studentLocations.swift in Sources */,
 				CF79EEF620B5E4320021577D /* httpInfo.swift in Sources */,
-				CF8DD1DD20B1DEA000DDF950 /* ViewController.swift in Sources */,
+				CF9FB75E20CB1C41003EF5F9 /* studentTableViewCell.swift in Sources */,
 				CF8DD1DB20B1DEA000DDF950 /* AppDelegate.swift in Sources */,
 				CF79EEF820BD9C900021577D /* GCDBlackBox.swift in Sources */,
 				CF79EEF420B5DC9D0021577D /* extensions.swift in Sources */,
+				CF9FB76020CB1CC2003EF5F9 /* studentTableViewController.swift in Sources */,
 				CF8DD21720B4B5B000DDF950 /* accountInfo.swift in Sources */,
 				CF8DD21320B3926100DDF950 /* LogInViewController.swift in Sources */,
+				CF9FB75C20CAD7B4003EF5F9 /* otherLoginViewController.swift in Sources */,
 				CF8DD21520B4AC7D00DDF950 /* constant.swift in Sources */,
 				CF8DD21B20B4C99800DDF950 /* dataSource.swift in Sources */,
 			);

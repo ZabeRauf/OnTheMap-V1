@@ -5,16 +5,6 @@
 //  Created by Zabe Rauf on 5/21/18.
 //  Copyright © 2018 Zaben. All rights reserved.
 //
-/*
- Steps for Authentication...
- // https://www.themoviedb.org/documentation/api/sessions
- (except with udacity stuff instead)
- Step 1: Create a request token
- Step 2: Ask the user for permission via the API ("login")
- Step 3: Create a session ID
- Step 4: Get the user id
- Step 5: Go to the next view!
- */
 
 import UIKit
 
@@ -32,8 +22,6 @@ class LogInViewController: UIViewController {
     
     @IBAction func openUdacity(sender: AnyObject) {
         UIApplication.shared.openURL(URL(string: "https://auth.udacity.com/sign-up?next=https%3A%2F%2Fclassroom.udacity.com%2Fauthenticated")!)
-        
-
     }
     
     // view controller
@@ -45,8 +33,6 @@ class LogInViewController: UIViewController {
         
         self.emailTextField.delegate = self as UITextFieldDelegate
         self.passwordTextField.delegate = self as UITextFieldDelegate
-        
-        newAccountButton.addTarget(self, action: Selector("openUdacity"), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -88,7 +74,6 @@ class LogInViewController: UIViewController {
     }
     
     func getKeyboardHeight(_ notification:Notification) -> CGFloat {
-        
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
         return keyboardSize.cgRectValue.height / 2
@@ -111,7 +96,7 @@ class LogInViewController: UIViewController {
     
     // login() checks if the email or password fields are empty. If it can get the user login data, it'll also try to get the users public data.
     // It has error checkers, and if there are no errors, it'll continue running.
-   /*
+   
     func login() {
         self.showActivityIndicator()
         
@@ -170,63 +155,7 @@ class LogInViewController: UIViewController {
             }
         }
     }
-    */
-    
-    func login() {
-        
-        self.showActivityIndicator()
-        
-        guard (emailTextField.text != ""), (passwordTextField.text != "") else {
-            self.hideActivityIndicator()
-            showAlertView(title: AlertTexts.Title, message: AlertTexts.MissingCredentials, buttonText: AlertTexts.Ok)
-            return
-        }
-        
-        let jsonBody = httpInfo.shared.buildAuthenticationHttpBody(username: emailTextField.text!, password: passwordTextField.text!)
-        
-        _ = httpInfo.shared.POSTRequest(UdacityConstants.SessionPath, parameters: nil, api: API.udacity, jsonBody: jsonBody) { (results,error) in
-            
-            if error != nil {
-                performUIUpdatesOnMain {
-                    if error!.localizedDescription == ResponseCodes.BadCredentials {
-                        self.hideActivityIndicator()
-                        self.showAlertView(title: AlertTexts.Title, message: AlertTexts.Request403, buttonText:AlertTexts.TryAgain)
-                    } else if error!.code == NSURLErrorTimedOut {
-                        self.hideActivityIndicator()
-                        self.showAlertView(title: AlertTexts.Title, message: AlertTexts.RequestTimedOut, buttonText: AlertTexts.Ok)
-                    } else {
-                        self.hideActivityIndicator()
-                        self.showAlertView(title: AlertTexts.Title, message: AlertTexts.MapError, buttonText: AlertTexts.Dismiss)
-                    }
-                }
-            } else {
-                if self.getLoginData(results!) {
-                    self.getPublicData(accountInfo.shared.userId!) { (firstName, lastName) in
-                        performUIUpdatesOnMain {
-                            guard (firstName != nil) else {
-                                self.hideActivityIndicator()
-                                self.showAlertView(title: AlertTexts.Title, message: AlertTexts.Request403, buttonText: AlertTexts.TryAgain)
-                                return
-                            }
-                            
-                            self.hideActivityIndicator()
-                            
-                            // add username to Account struct and transition to enxt view
-                            accountInfo.shared.firstName = firstName
-                            accountInfo.shared.lastName = lastName
-                            self.performSegue(withIdentifier: "LoginSegue", sender: nil)
-                        }
-                    }
-                } else {
-                    performUIUpdatesOnMain {
-                        self.hideActivityIndicator()
-                        self.showAlertView(title: AlertTexts.Title, message: AlertTexts.LoginError, buttonText: AlertTexts.TryAgain)
-                    }
-                }
-                
-            }
-        }
-    }
+
     
     
     // getLoginData makes sure it has log in data and stores the info before continuing.
@@ -257,7 +186,6 @@ class LogInViewController: UIViewController {
     // getPublicData uses the account ID of a udacity user and gets the first and last name of the user.
     
     func getPublicData(_ accountId: String, completionHandler: @escaping (_ firstName: String?,_ lastName: String?) -> Void) {
-        
         let method = Methods.UdacityUser.replacingOccurrences(of: "<user_id>", with: accountId)
         
         _ = httpInfo.shared.GETRequest(method, parameters: nil, api: .udacity) { (results,error) in
@@ -274,7 +202,6 @@ class LogInViewController: UIViewController {
                 completionHandler(nil, nil)
                 return
             }
-            
             completionHandler(firstName, lastName)
         }
     }

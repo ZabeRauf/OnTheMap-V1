@@ -96,7 +96,7 @@ class httpInfo {
             
             func sendError(_ error: String) {
                 let userInfo = [NSLocalizedDescriptionKey : error]
-                completionHandlerForGET(nil, NSError(domain: "taskForGETMethod", code: 1, userInfo: userInfo))
+                completionHandlerForGET(nil, NSError(domain: "GETMethod", code: 1, userInfo: userInfo))
             }
             
             guard (error == nil) else {
@@ -105,13 +105,13 @@ class httpInfo {
             }
             
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
-                sendError("Your request returned a status code other than 2xx!")
+                sendError("Status code error")
                 return
             }
             
             /* GUARD: Was there any data returned? */
             guard let data = data else {
-                sendError("No data was returned by the request!")
+                sendError("No data was returned.")
                 return
             }
             
@@ -137,7 +137,7 @@ class httpInfo {
             
             func sendError(_ error: String) {
                 let userInfo = [NSLocalizedDescriptionKey : error]
-                completionHandlerForPOST(nil, NSError(domain: "taskForPOSTMethod", code: 1, userInfo: userInfo))
+                completionHandlerForPOST(nil, NSError(domain: "POSTMethod", code: 1, userInfo: userInfo))
             }
             
             guard (error == nil) else {

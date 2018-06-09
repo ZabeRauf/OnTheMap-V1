@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 struct accountInfo {
     static var shared = accountInfo()
     

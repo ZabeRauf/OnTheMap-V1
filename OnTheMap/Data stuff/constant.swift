@@ -19,10 +19,10 @@ struct Scheme {
 
 struct ParseConstants {
     static let ParseAppId = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
-    static let ParseRestApiKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
-    static let ApiHost = "parse.udacity.com"
+    static let ParseRestApiKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gYY"
+    static let ApiHost = "https://parse.udacity.com/parse/classes"
     static let ApiPath = "/parse/classes"
-}
+} 
 
 struct UdacityConstants {
     static let ApiHost = "www.udacity.com"
