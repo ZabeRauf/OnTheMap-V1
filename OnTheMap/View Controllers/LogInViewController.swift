@@ -45,6 +45,10 @@ class LogInViewController: UIViewController {
         unsubscribeFromKeyboardNotification()
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     // subscribes to keyboard events.
     
     func subscribeToKeyboardNotificaiton(){
@@ -105,7 +109,7 @@ class LogInViewController: UIViewController {
                 self.hideActivityIndicator()
                 showAlertView(title: AlertTexts.Title, message: AlertTexts.MissingCredentials, buttonText: AlertTexts.Ok)
                 return
-        }
+            }
         
         let jsonBody = httpInfo.shared.buildAuthenticationHttpBody(username: emailTextField.text!, password: passwordTextField.text!)
         
@@ -141,7 +145,7 @@ class LogInViewController: UIViewController {
                             
                             accountInfo.shared.firstName = firstName
                             accountInfo.shared.lastName = lastName
-                            self.performSegue(withIdentifier: "logMeIn", sender: nil)
+                            //self.performSegue(withIdentifier: "logMeIn", sender: nil)
                         }
                     }
                 }

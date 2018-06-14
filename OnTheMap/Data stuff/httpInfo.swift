@@ -48,7 +48,6 @@ class httpInfo {
             request.addValue("application/json", forHTTPHeaderField: "Accept")
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         }
-        
         return request as URLRequest
     }
     
@@ -198,15 +197,10 @@ class httpInfo {
             guard let data = data else {
                 completionHandlerForDELETE(false)
                 return
-            }
-            
+            }            
             completionHandlerForDELETE(true)
-            
         }
-        
         task.resume()
-        
         return task
-        
     }
 }

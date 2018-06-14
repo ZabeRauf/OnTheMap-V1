@@ -25,6 +25,8 @@
 		CF9FB75E20CB1C41003EF5F9 /* studentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB75D20CB1C41003EF5F9 /* studentTableViewCell.swift */; };
 		CF9FB76020CB1CC2003EF5F9 /* studentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB75F20CB1CC2003EF5F9 /* studentTableViewController.swift */; };
 		CF9FB76420CC178B003EF5F9 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9FB76320CC178B003EF5F9 /* assets.xcassets */; };
+		CF9FB76620CC21F8003EF5F9 /* addLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB76520CC21F8003EF5F9 /* addLocationViewController.swift */; };
+		CF9FB76820CD9299003EF5F9 /* submitLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9FB76720CD9299003EF5F9 /* submitLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		CF9FB75D20CB1C41003EF5F9 /* studentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentTableViewCell.swift; sourceTree = "<group>"; };
 		CF9FB75F20CB1CC2003EF5F9 /* studentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentTableViewController.swift; sourceTree = "<group>"; };
 		CF9FB76320CC178B003EF5F9 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = assets.xcassets; path = ../assets.xcassets; sourceTree = "<group>"; };
+		CF9FB76520CC21F8003EF5F9 /* addLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = addLocationViewController.swift; path = "OnTheMap/View Controllers/addLocationViewController.swift"; sourceTree = SOURCE_ROOT; };
+		CF9FB76720CD9299003EF5F9 /* submitLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = submitLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 				CF9FB74B20C0562C003EF5F9 /* MapViewController.swift */,
 				CF9FB75D20CB1C41003EF5F9 /* studentTableViewCell.swift */,
 				CF9FB75F20CB1CC2003EF5F9 /* studentTableViewController.swift */,
+				CF9FB76520CC21F8003EF5F9 /* addLocationViewController.swift */,
+				CF9FB76720CD9299003EF5F9 /* submitLocationViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -333,7 +339,9 @@
 				CF8DD21320B3926100DDF950 /* LogInViewController.swift in Sources */,
 				CF9FB75C20CAD7B4003EF5F9 /* otherLoginViewController.swift in Sources */,
 				CF8DD21520B4AC7D00DDF950 /* constant.swift in Sources */,
+				CF9FB76820CD9299003EF5F9 /* submitLocationViewController.swift in Sources */,
 				CF8DD21B20B4C99800DDF950 /* dataSource.swift in Sources */,
+				CF9FB76620CC21F8003EF5F9 /* addLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
