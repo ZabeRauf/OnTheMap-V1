@@ -142,10 +142,9 @@ class LogInViewController: UIViewController {
                                     return
                             }
                             self.hideActivityIndicator()
-                            
                             accountInfo.shared.firstName = firstName
                             accountInfo.shared.lastName = lastName
-                            //self.performSegue(withIdentifier: "logMeIn", sender: nil)
+                            self.performSegue(withIdentifier: "logMeIn", sender: nil)
                         }
                     }
                 }

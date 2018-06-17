@@ -171,8 +171,8 @@
 				CF8DD21220B3926100DDF950 /* LogInViewController.swift */,
 				CF9FB75B20CAD7B4003EF5F9 /* otherLoginViewController.swift */,
 				CF9FB74B20C0562C003EF5F9 /* MapViewController.swift */,
-				CF9FB75D20CB1C41003EF5F9 /* studentTableViewCell.swift */,
 				CF9FB75F20CB1CC2003EF5F9 /* studentTableViewController.swift */,
+				CF9FB75D20CB1C41003EF5F9 /* studentTableViewCell.swift */,
 				CF9FB76520CC21F8003EF5F9 /* addLocationViewController.swift */,
 				CF9FB76720CD9299003EF5F9 /* submitLocationViewController.swift */,
 			);

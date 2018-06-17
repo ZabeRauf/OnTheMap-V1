@@ -10,7 +10,10 @@ import UIKit
 
 class studentTableViewController: UIViewController {
     
+    // outlets
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var logoutButton: UIBarButtonItem!
+    @IBOutlet weak var addButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()

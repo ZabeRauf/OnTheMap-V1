@@ -23,15 +23,14 @@ class submitLocationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         mapView.delegate = self
         self.submitButton.isHidden = false
-        
-        let geoCoder = CLGeocoder()
-        
+        let geoCodes = CLGeocoder()
         showActivityIndicator()
         
-        geoCoder.geocodeAddressString(self.location) { (placemarks, error) -> Void in
+        // error when adding a location
+        geoCodes.geocodeAddressString(location) {
+            (placemarks, error) -> Void in
             
             self.hideActivityIndicator()
             if error == nil {
@@ -44,7 +43,6 @@ class submitLocationViewController: UIViewController {
                     let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
                     let region = MKCoordinateRegion(center: self.annotation.coordinate, span: span)
                     self.mapView.setRegion(region, animated: true)
-                    
                 }
             }
             else {
@@ -100,10 +98,8 @@ class submitLocationViewController: UIViewController {
                     self.hideActivityIndicator()
                     self.showAlertView(title: AlertTexts.Title, message: AlertTexts.PostError, buttonText: AlertTexts.Dismiss)
                 }
-                
             }
         }
-        
     }
 }
 

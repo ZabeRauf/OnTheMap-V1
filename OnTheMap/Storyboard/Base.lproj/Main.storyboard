@@ -58,7 +58,6 @@
                                         </state>
                                         <connections>
                                             <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="35H-vP-DCo"/>
-                                            <segue destination="lHi-Un-QLh" kind="presentation" id="Qon-1e-Q5u"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-6m-YFB">
@@ -106,7 +105,7 @@
                         <outlet property="emailTextField" destination="k8R-8H-uMK" id="0an-NH-avW"/>
                         <outlet property="newAccountButton" destination="hcb-6m-YFB" id="Oeg-IB-800"/>
                         <outlet property="passwordTextField" destination="tpA-VP-aEf" id="c7W-qw-Ieu"/>
-                        <segue destination="lHi-Un-QLh" kind="presentation" identifier="" id="RJz-Wd-p9L"/>
+                        <segue destination="lHi-Un-QLh" kind="presentation" identifier="logMeIn" id="mVt-Qd-vjj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -187,7 +186,6 @@
                                         <state key="normal" title="Continue"/>
                                         <connections>
                                             <action selector="continuePressed:" destination="kmf-gf-O19" eventType="touchUpInside" id="Fe2-gO-7zN"/>
-                                            <segue destination="csT-hE-wMQ" kind="show" id="My3-4Z-FsJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -231,10 +229,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="continueButton" destination="NGd-c3-CSm" id="WjO-Bk-wEZ"/>
-                        <outlet property="locationTextField" destination="dZ6-b4-kQg" id="GiK-N9-uBI"/>
-                        <outlet property="locationTextfield" destination="dZ6-b4-kQg" id="TvM-4m-2NW"/>
+                        <outlet property="continueButton" destination="NGd-c3-CSm" id="kbN-Yj-mh8"/>
+                        <outlet property="locationTextfield" destination="dZ6-b4-kQg" id="7wI-zo-UxE"/>
                         <outlet property="websiteTextfield" destination="i1x-8w-tJP" id="EGj-ZR-t0W"/>
+                        <segue destination="csT-hE-wMQ" kind="show" identifier="showMeStuff" id="7Uq-CP-1Jb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9V6-SB-NKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -321,7 +319,7 @@
                                     </barButtonItem>
                                     <barButtonItem systemItem="add" id="Ubu-nD-bU7">
                                         <connections>
-                                            <segue destination="kmf-gf-O19" kind="show" id="VgW-eG-qU2"/>
+                                            <segue destination="kmf-gf-O19" kind="show" id="0Eh-5F-X1Z"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -340,18 +338,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="pin" id="4WU-LI-2dO"/>
                     <connections>
-                        <outlet property="addButton" destination="Ubu-nD-bU7" id="Ale-OS-Wbi"/>
-                        <outlet property="logoutButton" destination="vsN-UW-T6z" id="62m-aX-kaS"/>
-                        <outlet property="mapView" destination="87d-XK-1O6" id="zlq-xm-jbQ"/>
-                        <outlet property="refreshButton" destination="8yl-O1-u1t" id="hO5-tj-SUM"/>
+                        <outlet property="addButton" destination="Ubu-nD-bU7" id="qlf-sy-Ggj"/>
+                        <outlet property="logoutButton" destination="vsN-UW-T6z" id="Si2-qZ-Bem"/>
+                        <outlet property="mapView" destination="87d-XK-1O6" id="z1f-pq-AZW"/>
+                        <outlet property="refreshButton" destination="8yl-O1-u1t" id="TKD-zt-L94"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0L-70-2La" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="C5z-af-sPm">
-                    <connections>
-                        <action selector="dropPin:" destination="sQv-rP-T7T" id="8xE-yO-4Gs"/>
-                    </connections>
-                </pongPressGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="C5z-af-sPm"/>
             </objects>
             <point key="canvasLocation" x="1758" y="-249"/>
         </scene>
@@ -408,7 +402,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="AXT-eW-gqc"/>
                                     <barButtonItem systemItem="add" id="unb-rH-09J">
                                         <connections>
-                                            <segue destination="kmf-gf-O19" kind="show" id="cIk-qC-eCE"/>
+                                            <segue destination="kmf-gf-O19" kind="show" id="ar5-QI-SDO"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -427,7 +421,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="List" image="table_30x30" id="WGZ-DG-30g"/>
                     <connections>
-                        <outlet property="tableView" destination="6Fo-bM-ELk" id="BoA-dQ-EhU"/>
+                        <outlet property="addButton" destination="unb-rH-09J" id="2Sh-Ew-ft2"/>
+                        <outlet property="logoutButton" destination="2Pv-RM-oTu" id="efp-ZM-EhX"/>
+                        <outlet property="tableView" destination="6Fo-bM-ELk" id="t5Q-DI-egC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBC-ns-a0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -442,7 +438,6 @@
         <image name="udacity" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cIk-qC-eCE"/>
-        <segue reference="RJz-Wd-p9L"/>
+        <segue reference="ar5-QI-SDO"/>
     </inferredMetricsTieBreakers>
 </document>

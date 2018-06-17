@@ -59,13 +59,13 @@ struct AlertTexts {
     static let CancelPin = "Cancel"
     static let SavePin = "Save"
     static let RequestTimedOut = "Request Timed Out"
-    static let MapError = "Unable To Load Map Data"
+    static let MapError = "Unable to load map data."
     static let MissingInfo = "Missing Information"
     static let Dismiss = "Dismiss"
-    static let PostError = "Unable To Post Data"
+    static let PostError = "Unable to post data."
     static let InvalidURL = "Invalid URL"
-    static let LogoutError = "Unable To Log Out"
-    static let LocationError = "Unable To Find Location"
+    static let LogoutError = "Unable to log out."
+    static let LocationError = "Unable to find location."
 }
 
 struct JSONResponseKeys {

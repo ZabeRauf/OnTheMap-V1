@@ -10,7 +10,7 @@ import UIKit
 
 class addLocationViewController: UIViewController {
     
-    // outlets =========================================================================================================================
+    // outlets
     
     @IBOutlet weak var locationTextfield: UITextField!
     @IBOutlet weak var websiteTextfield: UITextField!
@@ -67,14 +67,14 @@ class addLocationViewController: UIViewController {
     // actions =======================================================================================================================
     
     @IBAction func continuePressed(_ sender: Any) {
-        
-        guard (locationTextfield.text != ""), (websiteTextfield.text != "") else {
+        guard (locationTextfield.text != ""), (websiteTextfield.text != "")
+            else {
             showAlertView(title: AlertTexts.Title, message: AlertTexts.MissingInfo, buttonText: AlertTexts.Ok)
             return
-        }
+            }
         
         let newPin = self.storyboard?.instantiateViewController(withIdentifier: "submitLocationViewController") as! submitLocationViewController
-        newPin.location = locationTextfield.text
+        newPin.location = locationTextfield.text!
         newPin.website = websiteTextfield.text
         self.navigationController?.pushViewController(newPin, animated: true)
     }
